@@ -17,28 +17,28 @@ export function GameScreen({
   onReset,
 }: GameScreenProps) {
   return (
-    <div className="flex flex-col min-h-full bg-gray-50">
+    <div className="flex flex-col min-h-full text-white bg-transparent">
       {/* Header */}
-      <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
+      <header className="flex items-center justify-between p-4 bg-[rgba(15,23,42,0.9)] border-b border-purple-500/20 shadow-[0_10px_30px_rgba(56,189,248,0.08)]">
         <button
           onClick={onReset}
-          className="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100"
+          className="text-cyan-200 text-sm px-3 py-1.5 rounded-full border border-cyan-400/20 hover:bg-white/5 transition"
         >
           ← Back
         </button>
-        <h1 className="font-bold text-gray-900">Bingo Mixer</h1>
+        <h1 className="font-bold text-xl neon-text">Bingo Mixer</h1>
         <div className="w-16"></div>
       </header>
 
       {/* Instructions */}
-      <p className="text-center text-gray-500 text-sm py-2 px-4">
+      <p className="text-center text-cyan-200/80 text-sm py-3 px-4">
         Tap a square when you find someone who matches it.
       </p>
 
       {/* Bingo indicator */}
       {hasBingo && (
-        <div className="bg-amber-100 text-amber-800 text-center py-2 font-semibold text-sm">
-          🎉 BINGO! You got a line!
+        <div className="bg-[#7c3aed]/15 text-[#f9a8d4] text-center py-2 font-semibold text-sm border border-[#8b5cf6]/30 mx-4 rounded-2xl shadow-[0_0_1rem_rgba(236,72,153,0.12)]">
+          🎉 BINGO! You completed a neon line!
         </div>
       )}
 
